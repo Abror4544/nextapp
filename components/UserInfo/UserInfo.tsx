@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Heading from "./Heading";
-import { UserType } from "../types";
+import Heading from "../Heading/Heading";
+import { UserType } from "../../types";
 
 type UserInfoProps = {
   user: UserType;

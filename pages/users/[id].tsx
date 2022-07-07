@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Back from "../../components/Back";
-import UserInfo from "../../components/UserInfo";
+import Back from "../../components/BackButton/Back";
+import UserInfo from "../../components/UserInfo/UserInfo";
 import { GetServerSideProps } from "next";
 import { FC } from "react";
 import { UserType } from "../../types";

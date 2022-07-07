@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import Heading from "../../components/Heading";
-import Preloader from "../../components/Preloader";
+import Heading from "../../components/Heading/Heading";
+import Preloader from "../../components/Preloader/Preloader";
 import { GetStaticProps } from "next";
 import { FC } from "react";
 import { UserType } from "../../types";

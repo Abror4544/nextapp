@@ -1,24 +1,29 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Heading from "../components/Heading";
-import Socials from "../components/Socials";
+import Heading from "../components/Heading/Heading";
+import Socials from "../components/Socials/Socials";
 import styles from "../styles/Home.module.scss";
+import axios from "axios";
 
 export const getStaticProps = async () => {
-  const response = await fetch(`${process.env.API_HOST}/socials`);
-  const data = await response.json();
+  try {
+    const result = await axios.get(`${process.env.API_HOST}/socials`);
+    const data = result.data;
 
-  if (!data) {
+    if (!data) {
+      return {
+        notFound: true,
+      };
+    }
+
     return {
-      notFound: true,
+      props: {
+        socials: data,
+      },
     };
+  } catch (error) {
+    console.log(error);
   }
-
-  return {
-    props: {
-      socials: data,
-    },
-  };
 };
 
 const Home: NextPage = ({ socials }: any) => {

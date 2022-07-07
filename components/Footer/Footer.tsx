@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Heading from "./Heading";
+import Heading from "../Heading/Heading";
 
 const Footer: FC = () => {
   return (

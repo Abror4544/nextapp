@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import Heading from "../components/Heading";
+import Heading from "../components/Heading/Heading";
 import styles from "../styles/404.module.scss";
 
 const NotFound = () => {

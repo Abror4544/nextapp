@@ -1,13 +1,15 @@
 const Back = () => {
+
   return (
-    <div
+    <button
+    data-testid="button"
       style={{ cursor: "pointer", margin: "10px 0" }}
       onClick={() => {
         history.back();
       }}
     >
       Back
-    </div>
+    </button>
   );
 };
 
